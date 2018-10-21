@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-example42-production</title>
+  <link href="animations.css" rel="stylesheet" type="text/css">
+  
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.7/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.7/angular-animate.js"></script>
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69316132-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  
+</head>
+<body ng-app="ngAnimate">
+    <div ng-init="fotos = [
+    {tipo:'John', img:'http://www.imagenes-juegos.com/halo-4-imagen-i306424-i.jpg', description:'campo muy bonito'},
+    {tipo:'Jessie', img:30, description:'girl'},
+    {tipo:'Johanna', img:28, description:'girl'},
+    {tipo:'Joy', img:15, description:'girl'},
+    {tipo:'Mary', img:28, description:'girl'},
+    {tipo:'Peter', img:95, description:'boy'},
+    {tipo:'Sebastian', img:50, description:'boy'},
+    {tipo:'Erika', img:27, description:'girl'},
+    {tipo:'Patrick', img:40, description:'boy'},
+    {tipo:'Samantha', img:60, description:'girl'}
+  ]">
+            <div>
+            <div class="contenido5Columnas">
+               	<button ng-click="type = '' " >
+               		todo
+             	</button>
+            </div>
+             <div class="contenido5Columnas">
+               	<button ng-click="type = 'casa' " >
+               		casa
+             	</button>
+            </div>
+            <div class="contenido5Columnas">
+               	<button ng-click="type = 'dormitorio' " >
+               		dormitorios
+             	</button>
+            </div>
+    <ul >
+      <li class="animate-repeat" ng-repeat="lugar in lugares">
+        <h1>{{lugar.name}}</h1>
+	<img src={{lugar.img}}>
+	<h2>{{lugar.description}}</h2>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
